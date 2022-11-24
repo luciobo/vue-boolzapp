@@ -1,0 +1,27 @@
+
+/* colori background */
+.sofnodo-cont-primario {
+    background-color: #D8DBD4;
+    height: 100vh;
+}
+
+.sf-nav-verde {
+    background-color: #009688;
+    height: 20vh;
+    z-index: -1;
+}
+
+/* dimensioni avata */
+
+.avatar-img {
+    width: 40px;
+    border-radius: 50%;
+}
+
+/* contenitori */
+
+.contenitore-chat {
+    height: 95vh;
+    margin-top: 1rem;
+    background-color: white;
+}
