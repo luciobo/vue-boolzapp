@@ -24,7 +24,7 @@
                     <!-- navbar verde per intenderci -->
                     <div class="sf-nav-verde">
                         <div class="row justify-content-center g-0">
-                            <div class="col-9 d-flex contenitore-chat">
+                            <div class="col-10 d-flex contenitore-chat">
 
                                 <!-- contenitore utenti sx ----------------------------------------->
                                 <div class="d-flex flex-column side-w">
@@ -38,7 +38,7 @@
                                         <!-- contenitore icone -->
                                         <div class="text-secondary">
                                             <i class="fa-solid fa-circle-notch"></i>
-                                            <i class="fa-solid fa-message px-2"></i>
+                                            <i class="fa-solid fa-message px-3"></i>
                                             <i class="fa-solid fa-ellipsis-vertical "></i>
                                         </div>
                                     </div>
@@ -60,11 +60,13 @@
                                     </div>
 
                                     <!-- barra ricerca contentitore utenti -->
-                                    <div class="p-2">
+                                    <div class="p-2 bg- bg-hat-nav">
                                         <form class="container-fluid">
                                             <div class="input-group">
-                                                <span class="input-group-text" id="basic-addon1"><i class="fa-solid fa-magnifying-glass"></i></span>
-                                                <input type="text" class="form-control small" placeholder="Cerca o ainizia una nuova chat">
+                                                <span class="input-group-text" id="basic-addon1"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></span>
+                                                <input type="text" class="form-control small"
+                                                    placeholder="Cerca o ainizia una nuova chat">
                                             </div>
                                         </form>
                                     </div>
@@ -80,7 +82,7 @@
                                                 <span class="p-2">nome utente</span>
                                                 <div class="small px-2">ciao</div>
                                             </div>
-                                            
+
                                         </div>
                                         <div class="d-flex p-2 bordo-inf-card">
                                             <div>
@@ -90,16 +92,41 @@
                                                 <span class="p-2">nome utente</span>
                                                 <div class="small px-2">ciao</div>
                                             </div>
-                                            
                                         </div>
-                                        
                                     </div>
                                 </div>
                                 <!-- contenitore chat laterale dx ------------------------------------->
                                 <div class="flex-grow-1 d-flex flex-column">
-                                    <div class="p-2">nav</div>
-                                    <div class="p-3 flex-grow-1 overflow-auto">chat</div>
-                                    <div class="p-1 ">footer</div>
+                                    <!-- nav chat -->
+                                    <div
+                                        class="d-flex justify-content-between align-items-center bg-hat-nav p-2 bordino-naw-chat">
+                                        <div>
+                                            <img class="avatar-img" src="imgs/avatar_1.jpg" alt="">
+                                            <span class="small">Sofia</span>
+                                        </div>
+                                        <!-- contenitore icone -->
+                                        <div class="text-secondary">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                            <i class="fa-solid fa-paperclip px-3"></i>
+                                            <i class="fa-solid fa-ellipsis-vertical "></i>
+                                        </div>
+                                    </div>
+                                    <!--  chat -->
+                                    <div class="p-3 flex-grow-1 overflow-auto bg-chat">chat
+                                    </div>
+                                    <!-- footer chat -->
+                                    <div class="p-2 d-flex justify-content-between align-items-center text-secondary">
+
+                                        <div><a class="px-4" href=""><i class="fa-regular fa-face-grin-hearts"></i></a></div>
+                                        
+                                        <div class="input-group flex-nowrap">
+                                            <input type="text" class="form-control" placeholder=""
+                                                aria-label="Username" aria-describedby="addon-wrapping">
+                                        </div>
+                                        <div>
+                                            <a class="px-4" href=""><i class="fa-solid fa-microphone"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
