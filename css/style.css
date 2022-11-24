@@ -1,5 +1,10 @@
 
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 /* colori background */
+
 .sofnodo-cont-primario {
     background-color: #D8DBD4;
     height: 100vh;
@@ -11,7 +16,15 @@
     z-index: -1;
 }
 
-/* dimensioni avata */
+.bg-hat-nav {
+    background-color: #EAEAEA;
+}
+
+.bg-notifiche {
+    background-color: #8EDAFC;
+}
+
+/* dimensioni avatar */
 
 .avatar-img {
     width: 40px;
@@ -24,4 +37,28 @@
     height: 95vh;
     margin-top: 1rem;
     background-color: white;
+}
+
+/* dimensionamento sidebar */
+
+.side-w {
+    width: 35%;
+}
+
+.cerchio-icona {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 15px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #8EDAFC;
+}
+
+/* bordo inferiore card */
+
+.bordo-inf-card {
+    border-bottom: 1px solid #EAEAEA;
 }
