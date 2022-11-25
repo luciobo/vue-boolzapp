@@ -1,4 +1,3 @@
-
 body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -75,4 +74,18 @@ img {
 
 .text-color {
     color: #B1B1B1;
+}
+
+.messaggio-chat {
+    padding: 1rem;
+    background: white;
+    max-width: 60%;
+    min-width: 20%;
+    border-radius: 1rem;
+    align-self: flex-start;
+}
+
+.messaggio-inviato {
+    align-self: flex-end;
+    background: #D5F9BA;
 }

@@ -32,8 +32,8 @@
                                     <!-- navbar contenitore utenti ----------->
                                     <div class="d-flex justify-content-between align-items-center bg-hat-nav p-2">
                                         <div>
-                                            <img class="avatar-img" src="imgs/avatar_1.jpg" alt="">
-                                            <span class="small">Sofia</span>
+                                            <img class="avatar-img" src="imgs/avatar_2.jpg" alt="">
+                                            <span class="small">Lucio</span>
                                         </div>
                                         <!-- contenitore icone -->
                                         <div class="text-secondary">
@@ -75,8 +75,8 @@
                                     <div class=" flex-grow-1 overflow-auto d-flex flex-column">
                                         <!-- card -->
                                         <div v-for="(utente, i) in utenti">
-                                        <!-- v-for sopra  ----------------------------------------->
-                                        
+                                            <!-- v-for sopra  ----------------------------------------->
+
                                             <div class="d-flex align-items-center p-2 bordo-inf-card">
                                                 <div>
                                                     <img :src="`imgs/avatar${utente.avatar}.jpg`" alt="">
@@ -107,7 +107,11 @@
                                         </div>
                                     </div>
                                     <!--  chat -->
-                                    <div class="p-3 flex-grow-1 overflow-auto bg-chat">chat
+                                    <div class="p-3 flex-grow-1 overflow-auto bg-chat">
+                                        <div class="d-flex flex-column">
+                                            <div class="messaggio-chat">a</div>
+                                            <div class="messaggio-chat messaggio-inviato">a</div>
+                                        </div>
                                     </div>
                                     <!-- footer chat -->
                                     <div class="p-2 d-flex justify-content-between align-items-center text-secondary">
