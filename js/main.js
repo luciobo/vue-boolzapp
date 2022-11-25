@@ -89,12 +89,17 @@ createApp({
                 }
                 ],
             },
-            ]
+            ],
+            utenteSelezionato: null,
         };
 
     },
     methods: {
 
+    },
+    beforeMount() {
+        this.utenteSelezionato = this.utenti[0]
     }
+
 
 }).mount("#app")

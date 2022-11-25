@@ -74,8 +74,9 @@
                                     <!-- card utenti -->
                                     <div class=" flex-grow-1 overflow-auto d-flex flex-column">
                                         <!-- card -->
-                                        <div v-for="(utente, i) in utenti">
-                                            <!-- v-for sopra  ----------------------------------------->
+                                        <div v-for="(utente, i) in utenti"
+                                        @click="utenteSelezionato = utente">
+                                        <!-- v-for sopra  ----------------------------------------->
 
                                             <div class="d-flex align-items-center p-2 bordo-inf-card">
                                                 <div>
@@ -90,6 +91,7 @@
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- contenitore chat laterale dx ------------------------------------->
                                 <div class="flex-grow-1 d-flex flex-column">
                                     <!-- nav chat -->
@@ -109,8 +111,11 @@
                                     <!--  chat -->
                                     <div class="p-3 flex-grow-1 overflow-auto bg-chat">
                                         <div class="d-flex flex-column">
-                                            <div class="messaggio-chat">a</div>
-                                            <div class="messaggio-chat messaggio-inviato">a</div>
+                                            <div class="messaggio-chat"
+                                            :class="{'messaggio-inviato' : oggettoMessaggio.status === 'sent'}"
+                                            v-for="(oggettoMessaggio) in utenteSelezionato.messages ">
+                                            {{oggettoMessaggio.message}}
+                                            </div>
                                         </div>
                                     </div>
                                     <!-- footer chat -->
