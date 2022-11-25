@@ -74,17 +74,18 @@
                                     <!-- card utenti -->
                                     <div class=" flex-grow-1 overflow-auto d-flex flex-column">
                                         <!-- card -->
-                                        <div v-for="(listaHTML, i) in utenti">
+                                        <div v-for="(utente, i) in utenti">
                                         <!-- v-for sopra  ----------------------------------------->
                                         
                                             <div class="d-flex align-items-center p-2 bordo-inf-card">
                                                 <div>
-                                                    <img :src="`imgs/avatar ${utenti.avatar}.jpg`" alt="">
+                                                    <img :src="`imgs/avatar ${utente.avatar}.jpg`" alt="">
                                                 </div>
-                                                <div>
-                                                    <span class="p-2">{{listaHTML.name}}</span>
-                                                    <div class="small px-2">ultimo messaggio inviato il</div>
+                                                <div class="flex-grow-1">
+                                                    <span class="p-2">{{utente.name}}</span>
+                                                    <div class="small px-2 text-color">ultimo messaggio inviato il</div>
                                                 </div>
+                                                <small class="align-self-baseline text-color">12:00</small>
                                             </div>
                                         </div>
                                     </div>
