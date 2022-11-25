@@ -99,6 +99,9 @@ createApp({
     },
     beforeMount() {
         this.utenteSelezionato = this.utenti[0]
+    },
+    invioMessaggio(){
+        this.utenteSelezionato= this.name
     }
 
 

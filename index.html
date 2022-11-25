@@ -30,7 +30,7 @@
                                 <div class="d-flex flex-column side-w">
 
                                     <!-- navbar contenitore utenti ----------->
-                                    <div class="d-flex justify-content-between align-items-center bg-hat-nav p-2">
+                                    <div class="d-flex justify-content-between align-items-center bg-hat-nav px-2 py-1">
                                         <div>
                                             <img class="avatar-img" src="imgs/avatar_2.jpg" alt="">
                                             <span class="small">Lucio</span>
@@ -75,8 +75,8 @@
                                     <div class=" flex-grow-1 overflow-auto d-flex flex-column">
                                         <!-- card -->
                                         <div v-for="(utente, i) in utenti"
-                                        @click="utenteSelezionato = utente">
-                                        <!-- v-for sopra  ----------------------------------------->
+                                            @click="utenteSelezionato = utente">
+                                            <!-- v-for sopra  ----------------------------------------->
 
                                             <div class="d-flex align-items-center p-2 bordo-inf-card">
                                                 <div>
@@ -98,8 +98,8 @@
                                     <div
                                         class="d-flex justify-content-between align-items-center bg-hat-nav p-2 bordino-naw-chat">
                                         <div>
-                                            <img class="avatar-img" src="imgs/avatar_1.jpg" alt="">
-                                            <span class="small">Sofia</span>
+                                            <img :src="`imgs/avatar${utenteSelezionato.avatar}.jpg`" alt="">
+                                            <span class="small px-3">{{utenteSelezionato.name}}</span>
                                         </div>
                                         <!-- contenitore icone -->
                                         <div class="text-secondary">
@@ -110,27 +110,33 @@
                                     </div>
                                     <!--  chat -->
                                     <div class="p-3 flex-grow-1 overflow-auto bg-chat">
-                                        <div class="d-flex flex-column">
+                                        <div class="d-flex flex-column gap-3">
                                             <div class="messaggio-chat"
-                                            :class="{'messaggio-inviato' : oggettoMessaggio.status === 'sent'}"
-                                            v-for="(oggettoMessaggio) in utenteSelezionato.messages ">
-                                            {{oggettoMessaggio.message}}
+                                                v-bind:class="{'messaggio-inviato' : oggettoMessaggio.status === 'sent'}"
+                                                v-for="(oggettoMessaggio) in utenteSelezionato.messages ">
+                                                <!-- v-for sopra  ----------------------------------------->
+                                                {{oggettoMessaggio.message}}
                                             </div>
                                         </div>
                                     </div>
                                     <!-- footer chat -->
-                                    <div class="p-2 d-flex justify-content-between align-items-center text-secondary">
+                                    <div class="p-2 d-flex align-items-center text-secondary bordino-naw-chat">
 
-                                        <div><a class="px-4 text-color" href=""><i
-                                                    class="fa-regular fa-face-grin-hearts"></i></a></div>
+                                        <div>
+                                            <a class="px-4 text-color" href="">
+                                                <i class="fa-regular fa-face-sad-cry"></i></i>
+                                            </a>
+                                        </div>
 
-                                        <div class="input-group flex-nowrap">
-                                            <input type="text" class="form-control" placeholder=""
-                                                aria-label="Username" aria-describedby="addon-wrapping">
+                                        <div class="flex-grow-1" @submit="invioMessaggio">
+                                            <form class="">
+                                                <input class="form-control form-control-sm " type="text" placeholder="invia messaggio, forse" aria-label=".form-control-sm example">
+                                            </form>
                                         </div>
                                         <div>
-                                            <a class="px-4 text-color" href=""><i
-                                                    class="fa-solid fa-microphone"></i></a>
+                                            <a class="px-4 text-color" href="">
+                                                <i class="fa-solid fa-microphone-lines-slash"></i>
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
