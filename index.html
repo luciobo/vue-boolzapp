@@ -72,20 +72,21 @@
                                     </div>
 
                                     <!-- card utenti -->
-                                    <div class=" flex-grow-1 overflow-auto d-flex flex-column" 
-                                    v-for="(listaHTML, i) in utenti">
+                                    <div class=" flex-grow-1 overflow-auto d-flex flex-column">
                                         <!-- card -->
-                                        <label for="">
-                                            <div class="d-flex p-2 bordo-inf-card">
+                                        <div v-for="(listaHTML, i) in utenti">
+                                        <!-- v-for sopra  ----------------------------------------->
+                                        
+                                            <div class="d-flex align-items-center p-2 bordo-inf-card">
                                                 <div>
-                                                    <img class="avatar-img" src="imgs/avatar_1.jpg" alt="">
+                                                    <img :src="`imgs/avatar ${utenti.avatar}.jpg`" alt="">
                                                 </div>
                                                 <div>
                                                     <span class="p-2">{{listaHTML.name}}</span>
-                                                    <div class="small px-2">{{}}</div>
+                                                    <div class="small px-2">ultimo messaggio inviato il</div>
                                                 </div>
                                             </div>
-                                        </label>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- contenitore chat laterale dx ------------------------------------->
@@ -110,14 +111,16 @@
                                     <!-- footer chat -->
                                     <div class="p-2 d-flex justify-content-between align-items-center text-secondary">
 
-                                        <div><a class="px-4 text-color" href=""><i class="fa-regular fa-face-grin-hearts"></i></a></div>
-                                        
+                                        <div><a class="px-4 text-color" href=""><i
+                                                    class="fa-regular fa-face-grin-hearts"></i></a></div>
+
                                         <div class="input-group flex-nowrap">
                                             <input type="text" class="form-control" placeholder=""
                                                 aria-label="Username" aria-describedby="addon-wrapping">
                                         </div>
                                         <div>
-                                            <a class="px-4 text-color" href=""><i class="fa-solid fa-microphone"></i></a>
+                                            <a class="px-4 text-color" href=""><i
+                                                    class="fa-solid fa-microphone"></i></a>
                                         </div>
                                     </div>
                                 </div>
