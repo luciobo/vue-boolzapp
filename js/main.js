@@ -91,6 +91,7 @@ createApp({
             },
             ],
             utenteSelezionato: null,
+            messaggioInviato: ""
         };
 
     },
@@ -100,8 +101,14 @@ createApp({
     beforeMount() {
         this.utenteSelezionato = this.utenti[0]
     },
-    invioMessaggio(){
-        this.utenteSelezionato= this.name
+    nuovoMessaggioInviato() {
+        
+
+        this.utenteSelezionato.messages.push({
+            date: '10/01/2020 15:50:00',
+            message: this.messaggioInviato,
+            status: 'received'
+        })
     }
 
 

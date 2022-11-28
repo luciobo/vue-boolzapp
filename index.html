@@ -128,9 +128,10 @@
                                             </a>
                                         </div>
 
-                                        <div class="flex-grow-1" @submit="invioMessaggio">
+                                        <div class="flex-grow-1">
                                             <form class="">
-                                                <input class="form-control form-control-sm " type="text" placeholder="invia messaggio, forse" aria-label=".form-control-sm example">
+                                                <input class="form-control form-control-sm " type="text" placeholder="invia messaggio, forse" aria-label=".form-control-sm example"
+                                                v-model="messaggioInviato" @submit.preventDefault="nuovoMessaggioInviato">
                                             </form>
                                         </div>
                                         <div>
