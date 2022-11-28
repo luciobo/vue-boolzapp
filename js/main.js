@@ -97,19 +97,22 @@ createApp({
     },
     methods: {
 
+        nuovoMessaggioInviato() {
+
+
+            this.utenteSelezionato.messages.push({
+                date: '10/01/2020 15:50:00',
+                message: this.messaggioInviato,
+                status: 'sent'
+            })
+        }
+
     },
+
     beforeMount() {
         this.utenteSelezionato = this.utenti[0]
     },
-    nuovoMessaggioInviato() {
-        
 
-        this.utenteSelezionato.messages.push({
-            date: '10/01/2020 15:50:00',
-            message: this.messaggioInviato,
-            status: 'received'
-        })
-    }
 
 
 }).mount("#app")
