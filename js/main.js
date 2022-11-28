@@ -91,7 +91,8 @@ createApp({
             },
             ],
             utenteSelezionato: null,
-            messaggioInviato: ""
+            messaggioInviato: "",
+            ricercaMessaggio: "",
         };
 
     },
@@ -110,11 +111,16 @@ createApp({
                 this.utenteSelezionato.messages.push({
                     date: '10/01/2020 15:50:00',
                     message: 'Sparati',
-                    status: 'recived'
+                    status: 'received'
                 })
             }, 1000);
 
             this.messaggioInviato = ""
+        },
+
+        ricercaMessaggioChat() {
+            console.log(this.ricercaMessaggio)
+
         }
 
     },

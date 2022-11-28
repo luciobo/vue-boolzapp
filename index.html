@@ -61,12 +61,10 @@
 
                                     <!-- barra ricerca contentitore utenti -->
                                     <div class="p-2 bg- bg-hat-nav">
-                                        <form class="container-fluid">
+                                        <form class="container-fluid" @submit.prevent="ricercaMessaggioChat">
                                             <div class="input-group">
-                                                <span class="input-group-text" id="basic-addon1"><i
-                                                        class="fa-solid fa-magnifying-glass"></i></span>
                                                 <input type="text" class="form-control small"
-                                                    placeholder="Cerca o ainizia una nuova chat">
+                                                    placeholder="Cerca o inizia una nuova chat" v-model="ricercaMessaggio">
                                             </div>
                                         </form>
                                     </div>
