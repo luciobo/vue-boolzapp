@@ -105,6 +105,16 @@ createApp({
                 message: this.messaggioInviato,
                 status: 'sent'
             })
+
+            setTimeout(() => {
+                this.utenteSelezionato.messages.push({
+                    date: '10/01/2020 15:50:00',
+                    message: 'Sparati',
+                    status: 'recived'
+                })
+            }, 1000);
+
+            this.messaggioInviato = ""
         }
 
     },
